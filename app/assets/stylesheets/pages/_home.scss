@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+body {
+  background-image: url('/assets/star4.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* Fallback for browsers that do not support WebP */
+@supports (background-image: url('/assets/star4.webp')) {
+  body {
+    background-image: url('/assets/star4.webp');
+  }
+}
+
+/* Fallback image for browsers that do not support WebP */
+body {
+  background-image: url('/assets/star4.jpeg');
+}
+
+.row {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
