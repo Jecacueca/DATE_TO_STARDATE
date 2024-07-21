@@ -6,18 +6,16 @@ class PagesController < ApplicationController
 
   def calculate_stardate
     @stardate = date_to_stardate(params[:date])
-    # respond_to do |format|
-    #   format.turbo_stream do
-    #     render turbo_stream: turbo_stream.replace("form_frame", partial: "pages/form")
-    #   end
-    # end
   end
 
   private
 
   def date_to_stardate(date)
     @date = params[:date].to_date
-    @stardate = "#{@date.year - 1900}#{'%02i' % @date.month}.#{'%02i' % @date.day}"
+    @stardate_year_month = ("#{@date.year - 1900}#{('%02i' % @date.month)}").to_i
+    # @stardate_month = ('%02i' % @date.month)
+    @stardate_day = @date.day
+    # raise
     respond_to do |format|
       format.turbo_stream do
         render turbo_stream: [
