@@ -1,5 +1,25 @@
 <div class="text-center">
   <h2>Your Stardate</h2>
-  <p><%= stardate %></p>
+  <div class="d-flex animated-number-container">
+    <div
+      data-controller="animated-number"
+      data-animated-number-start-value="<%= @stardate_year_month - 100 %>"
+      data-animated-number-end-value="<%= @stardate_year_month %>"
+      data-animated-number-duration-value="2000"
+    ></div>
+    <div>.</div>
+    <% if @stardate_day.digits.length == 2 %>
+      <div
+          data-controller="animated-number"
+          data-animated-number-start-value="00"
+          data-animated-number-end-value="<%= @stardate_day %>"
+          data-animated-number-duration-value="2000"
+        ></div>
+      </div>
+    <% else %>
+      <div><%= '%02i' % @stardate_day %></div>
+    <% end %>
+  </div>
+
   <%= button_to "Recalculate", root_path, method: :get, class: "btn btn-primary trek-button", data: { turbo_frame: "form_frame" } %>
 </div>
