@@ -24,4 +24,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
+}
+
+.animated-number-container {
+  font-size: 52px;
+  justify-content: center;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7),;
+  margin: 32px auto;
 }

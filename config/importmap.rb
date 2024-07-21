@@ -8,3 +8,4 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "@stimulus-components/animated-number", to: "@stimulus-components--animated-number.js" # @5.0.0
+pin "flatpickr" # @4.6.13
