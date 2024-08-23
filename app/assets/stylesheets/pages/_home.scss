@@ -17,7 +17,7 @@ body {
 
 /* Fallback image for browsers that do not support WebP */
 body {
-  background-image: url('/assets/star4.jpeg');
+  background-image: url(asset_path('star4.jpeg'));
 }
 
 .row {
